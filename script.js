@@ -356,6 +356,22 @@
 // })
 // console.log(reduced)
 
+//? 14.9 Some Method
+// let arr = [1, 2, 3, 4]
+// let some = arr.some((el) => (
+//   el % 8 === 0
+// ))
+// console.log(some)
+
+//? 14.10 every Method
+// let arr = [1, 2, 3, 4]
+// let arr = [4, 2, 6, 8]
+// let every = arr.every((el) => (
+//   el % 2 == 0
+// ))
+// console.log(every)
+
+
 //* 15. nested Arrays
 
 // let nums = [ [2, 4], [3, 6], [4, 8]]
@@ -590,21 +606,203 @@
 
 //* 33. this keyword
 
-const students = {
-  name: "Rohit",
-  age: 22,
-  eng: 95,
-  maths: 92,
-  getAvg() {
-    // let avg = (maths + eng) / 2;   //! return an Error (Maths is not defined) that's why we need to use this keyword
-    let avg = (this.maths + this.eng) / 2;
-    console.log(avg);
-  },
-};
+// const students = {
+//   name: "Rohit",
+//   age: 22,
+//   eng: 95,
+//   maths: 92,
+//   getAvg() {
+//     // let avg = (maths + eng) / 2;   //! return an Error (Maths is not defined) that's why we need to use this keyword
+//     let avg = (this.maths + this.eng) / 2;
+//     console.log(avg);
+//   },
+// };
 
-function getAvg(){
-    let avg = this.maths  //! return an Error Here because it will only work in students object not outside
-    console.log(avg)
+//! return an Error Here because it will only work in students object not outside
+// function getAvg(){
+//     let avg = this.maths
+//     console.log(avg)
+// }
+// students.getAvg();
+// getAvg()
+
+//* 34. try-catch block
+
+// console.log("hello");
+// try {
+//   console.log(a);
+// } catch (error) {
+//   console.error("Error");
+// }
+// console.log("hi");
+
+//* 35. SetTimeout()
+
+// setTimeout(() => {
+//     console.log("Hello")
+// }, 2000);
+
+//* 36. SetInterval()
+
+// const greet = setInterval(() => {
+//     console.log("hello")
+// }, 1000);
+
+//* 37. clearTimeout()
+
+// const greet = setTimeout(() => {
+//     console.log("Hello")
+// }, 2000)
+// clearTimeout(greet)
+
+//* 38. clearInterval()
+
+// const greet = setInterval(() => {
+//   console.log("hello");
+// }, 1000);
+
+// setTimeout(() => {
+//   clearInterval(greet);
+//   console.log("Interval cleared");
+// }, 5000);
+
+//* 39. Callback function
+
+// function greet() {
+//   console.log("Hello")
+// }
+// function Outer() {
+//   console.log("Outer")
+//   setTimeout(() => {
+//     greet()
+//   }, 2000)
+// }
+// Outer()
+
+//* 40. key for arrow functions
+
+// const students = {
+//   name : "Rohit",
+//   marks : 45,
+//   prop : this,
+//   getName : function(){
+//     console.log(this)
+//     return this.name
+//   },
+//   getMarks : () => {
+//     console.log(this)
+//     return this.marks
+//   }
+// }
+// students.getName()
+// students.getMarks()
+
+//? 2nd Scenario
+// const students = {
+//   getInfo1 : function () {
+//     setTimeout(() => {
+//       console.log(this)
+//     }, 2000)
+//   },
+//   getInfo2 : function () {
+//     setTimeout(function() {
+//       console.log(this)
+//     }, 2000)
+//   }
+// }
+// students.getInfo1()
+// students.getInfo2()
+
+//* 41. Default Parameter
+
+// function func(a, b = 2) {
+//   console.log(a + b)
+// }
+// func(2, 5)
+
+// function func2(a = 2, b){
+//   console.log(a  + b)
+// }
+// func2(0)
+
+
+//* 42.Spread
+
+// let arr = [1, 2, 3, 4, 5]
+// console.log(arr)
+// console.log(...arr)
+// console.log(Math.min(...arr))
+// console.log(Math.max(...arr))
+
+// let str = "ROHIT"
+// console.log(...str)
+
+
+//* 43. Spread with array literals
+
+//? for array
+// let arr = [1, 2, 3, 4, 5]
+// let newArr = [...arr]
+// newArr.push(6)
+// console.log(newArr)
+// console.log(arr)
+
+//? for char
+// let name = "ROHIT"
+// let chars = [...name]
+// console.log(chars)
+
+//? individual access the elements of the array
+// let str = ['rohit', 'raj', 'rahul', 'ravi']
+// console.log(...str[3])
+
+//? combine 2 arrays together
+// let even = [2, 4, 6, 8]
+// let odd = [1, 3, 5, 7]
+// let newArr = [...even,...odd]
+// console.log(newArr)
+
+//* 43. Spread with object literals
+
+//? copy the object into new object and add some more objects like here we add id
+// let data = {
+//   email: "ironman@gmail.com",
+//   pass: 1234
+// }
+// let copyData = { ...data, id: 123 }
+// console.log(copyData)
+
+//? now we are creating a new object with the array
+// let arr = [1, 2, 3, 4, 5]
+// let arrObject = {...arr}
+// console.log(arrObject)
+
+//? for same as above we can create a new object from string also
+// let str = "Rohit"
+// let strObject = {...str}
+// console.log(strObject)
+
+//* Rest
+
+// function sum(...args) {
+//   for (let i = 0; i < args.length; i++) {
+//     console.log("You Gave Us : " + args[i]);
+//   }
+// }
+// sum(2, 4, 6)
+
+// function sum(){
+//   let arr = [...arguments]
+//   for (let i = 0; i < arr.length; i++){
+//     console.log("You Gave Us : " + arr[i]);
+//   }
+// }
+// sum(6, 7, 8)
+
+function sum(msg, ...args){
+  console.log(msg)
+  return args.reduce((total, i) => (
+    total += i
+  ))
 }
-students.getAvg();
-getAvg()
+console.log(sum("Hello", 2, 4, 5, 6))
