@@ -799,10 +799,13 @@
 // }
 // sum(6, 7, 8)
 
-function sum(msg, ...args){
-  console.log(msg)
-  return args.reduce((total, i) => (
-    total += i
-  ))
-}
-console.log(sum("Hello", 2, 4, 5, 6))
+// function sum(msg, ...args){
+//   console.log(msg)
+//   return args.reduce((total, i) => (
+//     total += i
+//   ))
+// }
+// console.log(sum("Hello", 2, 4, 5, 6))
+
+
+//! from Destructuring all Topics are available on script2.js
