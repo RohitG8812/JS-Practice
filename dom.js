@@ -99,4 +99,175 @@ let newSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiGui-nzkPn4
 // image.previousElementSibling.style.border = "1px solid red"
 
 
-//* Adding Elements
+//* 7.Adding Elements
+
+// let newPara = document.createElement('p')
+// newPara.innerText = "New Paragraph"
+
+//? appendChild
+// let body = document.querySelector('body')
+// body.appendChild(newPara)
+
+//? append
+// let btn = document.createElement('button')
+// btn.innerText = "Click me"
+// newPara.append(" ", btn)
+// newPara.append(" New Append")
+
+//? prepend
+// let btn2 = document.createElement('button')
+// btn2.innerText = "Button2"
+// newPara.prepend(btn2)
+
+//? insertAdjacent
+// let span = document.createElement("span")
+// span.innerText = "InnerAdjacent Content"
+//? there are 4 types positions in the insertAdjacent
+// newPara.insertAdjacentElement('beforebegin', span) //! at start above the object
+// newPara.insertAdjacentElement('afterbegin', span) //! at start in same line
+// newPara.insertAdjacentElement('afterend', span) //! at last below the object
+// newPara.insertAdjacentElement('beforeend', span) //! at last in same line
+
+
+//* 8.Removing Elements
+
+//? removeChild
+// let body = document.querySelector('body');
+// let img = document.querySelector('img')
+// body.removeChild(img)
+
+//? remove()
+// let body = document.querySelector('body');
+// let img = document.querySelector('img')
+// img.remove()
+// body.remove()
+
+
+//* 9.DOM Events
+
+// function sayHello() {
+//     alert('Hello')
+// }
+
+//? 1.OnClick Event
+// let btn = document.querySelector('button');
+// btn.onclick = (() => {
+//     console.log("Btn was Clicked")
+//     sayHello()
+// })
+
+//? 2.OnMouseEnter
+// btn.onmouseenter = (() => {
+//     console.log("mouseInside")
+// })
+
+//? 3.OnMouseLeave
+// btn.onmouseleave = (() => {
+//     console.log("MouseLeave")
+// })
+
+//? 4.addEventListener
+//? this are keyboard Events
+// document.addEventListener('keydown', () => {
+//     console.log('key Press')
+// })
+
+
+//* 10.Events arguments
+//? for keypress
+// document.addEventListener('keypress', (e) => {
+//     console.log(e)
+// })
+
+//? for mouseOver
+// document.addEventListener('keypress', (e) => {
+//     console.log(e)
+// })
+
+//* 11.Form Events
+
+//? Submit and e.preventDefault
+// let Form = document.querySelector('form')
+// let body = document.querySelector('body')
+// Form.addEventListener('submit', (e) => {
+//     e.preventDefault()
+//     let message = document.createElement('div')
+//     message.textContent = "Form Submitted Successfully"
+//     body.appendChild(message)
+//     setTimeout(() => {
+//         body.removeChild(message)
+//     }, 3000)
+// })
+
+//* 12.Extracting Form Data
+// let Form = document.querySelector('form')
+// let User = document.getElementById('user')
+// let Pass = document.getElementById('pass')
+// console.log(User.value)
+
+// Form.addEventListener('submit', function (e) {
+//     e.preventDefault()
+//     console.log("Username : ", User.value)
+//     console.log("PassWord : ", Pass.value)
+//     alert(`Hello ${User.value}, Your Password is ${Pass.value}`)
+//     User.value = ""
+//     Pass.value = ""
+// })
+
+
+//? accesing by the elements
+// Form.addEventListener('submit', function (e) {
+//     e.preventDefault()
+//     console.dir(Form)
+//     console.log("Username : ", this.elements[0].value)
+//     console.log("PassWord : ", this.elements[1].value)
+//     alert(`Hello ${User.value}, Your Password is ${Pass.value}`)
+//     User.value = ""
+//     Pass.value = ""
+// })
+
+//* 13.Change Event
+
+// User.addEventListener('change', () => {
+//     console.log("Value Changed")
+//     console.log("Final Value : ", User.value)
+// })
+
+
+//* 14.Input Event
+
+// User.addEventListener('input', function() {   //! print undefined if we use Arrow Function here...
+//     console.log(this.value)
+// })
+
+//* 15.MouseOut Event
+
+// User.addEventListener('mouseout', function() {
+//     console.log("Mouse Out")
+// })
+
+
+//* 16. KeyPress Event
+
+// User.addEventListener('keypress', function () {
+//     User.value = "Rohit"
+//     console.log(this.value)
+// })
+
+//* 17. Scroll Event
+
+// window.addEventListener('scroll', () => {
+//     console.log(window.scrollY)
+// })
+
+//* 18.load event
+
+// window.addEventListener('load', function () {
+//     console.log("Fully Loaded")
+// })
+
+//* 19.DomContentLoaded event
+
+// window.addEventListener('DOMContentLoaded', function () {
+//     console.log("Dom Loaded")
+// })
