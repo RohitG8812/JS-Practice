@@ -271,3 +271,40 @@ let newSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiGui-nzkPn4
 // window.addEventListener('DOMContentLoaded', function () {
 //     console.log("Dom Loaded")
 // })
+
+
+//* 20.EventBubbling
+
+let Div = document.querySelector('.ulDiv');
+let Ui = document.querySelector('ul')
+let Li = document.querySelector('li')
+
+// Div.addEventListener('click', (e) => {
+//     e.stopPropagation()
+//     console.log("Div was clicked")
+// })
+// Ui.addEventListener('click', (e) => {
+//     e.stopPropagation()
+//     console.log("UI was clicked")
+// })
+// Li.addEventListener('click', (e) => {
+//     e.stopPropagation()
+//     console.log("Li was clicked")
+// })
+
+//* 21. Event Delegation
+
+// let form = document.querySelector('form')
+// Div.addEventListener('click', (e) => {
+//     console.log(e)
+//     if (e.target.localName === 'li') {
+//         console.log("LI was clicked")
+//     }
+// })
+
+// form.addEventListener('click', (e) => {
+//     if (e.target.tagName === 'BUTTON') {
+//         e.preventDefault()
+//         console.log("Button Was clicked")
+//     }
+// })
