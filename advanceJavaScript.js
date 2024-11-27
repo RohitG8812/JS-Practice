@@ -232,3 +232,86 @@
 //     }
 // }
 // demo()
+
+
+//* fetch data from API
+// let input = document.querySelector('input')
+// let dataDiv = document.querySelector('#apiData')
+// let btn = document.querySelector('button')
+
+//? 1st Method (fetch with .then)
+// function getData() {
+//     btn.addEventListener('click', () => {
+//         let searchInput = input.value
+//         console.log(searchInput)
+//         let api = `http://universities.hipolabs.com/search?country=${searchInput}`
+//         fetch(api)
+//             .then((res) => {
+//                 return res.json()
+//             })
+//             .then((data) => {
+//                 console.log(data)
+//                 dataDiv.innerHTML = data.map(university => `<p>${university.name}</p>`).join('')
+//             })
+//     })
+// }
+// getData()
+
+//? 2md Method (fetch with async await)
+// async function getData() {
+//     btn.addEventListener('click', async () => {
+//         let searchInput = input.value
+//         console.log(searchInput)
+//         let api = `http://universities.hipolabs.com/search?country=${searchInput}`
+//         let res = await fetch(api)
+//         let data = await res.json()
+//         console.log(data)
+//         dataDiv.innerHTML = data.map(university => `<p>${university.name}</p>`).join('')
+//     })
+// }
+// getData()
+
+//? 3rd Method using axios
+// function getData() {
+//     btn.addEventListener('click', async () => {
+//         let searchInput = input.value
+//         let api = `http://universities.hipolabs.com/search?country=${searchInput}`;
+//         let res = await axios.get(api)
+//         console.log(res.data)
+//         dataDiv.innerHTML = res.data.map(university => `<p>${university.domains[0]}</p>`).join('')
+//     })
+// }
+// getData()
+
+//? 4rd Method using axios
+// let btn = document.querySelector('button')
+// let div = document.querySelector('.dogAPI')
+// function getData() {
+//     let img = document.createElement('img')
+//     btn.addEventListener('click', async () => {
+//         let api = "https://dog.ceo/api/breeds/image/random"
+//         let res = await axios.get(api)
+//         console.log(res.data.message)
+//         img.src = res.data.message
+//         img.width = 300
+//         div.appendChild(img)
+//     })
+// }
+// getData()
+
+
+//* Sending Headers with Api Request
+// let para = document.querySelector('#joke')
+// let btn = document.querySelector('button')
+
+//? this api format has various formats so we need to pass headers to specify that in which format we want data.
+// function getData() {
+//     btn.addEventListener('click', async () => {
+//         let api = "https://icanhazdadjoke.com/"
+//         let config = { headers: { Accept: 'application/json' } };
+//         let res = await axios.get(api, config)
+//         console.log(res.data.joke)
+//         para.innerText = res.data.joke
+//     })
+// }
+// getData()
