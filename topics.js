@@ -169,7 +169,7 @@
 // x()
 
 
-//* Conditional 
+//* 8.Conditional 
 
 //? 1. Ternary Operator
 // const age = 15
@@ -215,3 +215,25 @@
 // }
 // let cityOfData = data?.address?.city
 // console.log(cityOfData)
+
+
+//*  9.localStorage and SessionStorage
+
+// let data = {
+//     name: 'Rohit',
+//     age: 23
+// }
+
+//? 1.LocalStorage
+// localStorage.setItem("DB", JSON.stringify(data)) //! Setting data to LocalStorage
+// let DB = JSON.parse(localStorage.getItem("DB"))  //! getting data from LocalStorage
+// console.log(DB)
+
+// let para = document.querySelectorAll('p')
+// para[0].innerText = DB.name
+// para[1].innerText = DB.age
+
+//? 2. SessionStorage
+// sessionStorage.setItem("DB", JSON.stringify(data))  //! Setting data to sessionStorage
+// let DB = JSON.parse(sessionStorage.getItem("DB"))   //! getting data from sessionStorage
+// console.log(DB)
