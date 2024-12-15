@@ -27,24 +27,48 @@
 //* decrement() reduces the current value by 1 and then returns it.
 //* reset() sets the current value to init and then returns it.
 
-function counterWithClosure(init) {
-    let initialValue = init
-    function increment() {
-        return ++init
-    }
-    function reset() {
-        return init = initialValue
-    }
-    function decrement() {
-        return --init
-    }
+// function counterWithClosure(init) {
+//     let initialValue = init
+//     function increment() {
+//         return ++init
+//     }
+//     function reset() {
+//         return init = initialValue
+//     }
+//     function decrement() {
+//         return --init
+//     }
 
-    return { increment, decrement, reset }
-}
+//     return { increment, decrement, reset }
+// }
 
-let cc = counterWithClosure(10)
-console.log(cc.increment())
-console.log(cc.increment())
-console.log(cc.decrement())
-console.log(cc.reset())
-console.log(cc.increment())
+// let cc = counterWithClosure(5)
+// console.log(cc.increment())
+// console.log(cc.increment())
+// console.log(cc.decrement())
+// console.log(cc.reset())
+// console.log(cc.increment())
+
+//* Effective Answer
+// function counterWithClosure(init) {
+//     let initialValue = init
+//     const functions = {
+//         increment: function increment() {
+//             return ++init
+//         },
+//         decrement: function decrement() {
+//             return --init
+//         },
+//         reset: function reset() {
+//             return init = initialValue
+//         }
+//     }
+//     return functions
+// }
+
+// let cc = counterWithClosure(5)
+// console.log(cc.increment())
+// console.log(cc.increment())
+// console.log(cc.decrement())
+// console.log(cc.reset())
+// console.log(cc.increment())
