@@ -76,6 +76,7 @@
 
 //* Find the Duplicate Numbers from array
 // function findDuplicateNumbers(arr) {
+//     console.time("Execution Time");
 //     let DuplicateArr = []
 //     for (let i = 0; i < arr.length; i++) {
 //         for (let j = i + 1; j < arr.length; j++) {
@@ -84,14 +85,16 @@
 //             }
 //         }
 //     }
-//     return DuplicateArr
+//     console.timeEnd("Execution Time");
+//     console.log(DuplicateArr)
 // }
 
 // let arr = [1, 2, 1, 3, 4, 2, 5, 3]
-// console.log(findDuplicateNumbers(arr))
+// findDuplicateNumbers(arr)
 
 //* Optimized Way
 function findDuplicateNumbers(arr) {
+    console.time("Execution Time");
     let DuplicateArr = new Set()
     let nonDuplicateArr = new Set()
 
@@ -101,6 +104,7 @@ function findDuplicateNumbers(arr) {
         }
         nonDuplicateArr.add(number)
     }
+    console.timeEnd("Execution Time");
     console.log("Duplicate : " + Array.from(DuplicateArr))
 }
 let arr = [1, 2, 1, 3, 4, 2, 5, 3]
