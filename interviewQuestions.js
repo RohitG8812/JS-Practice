@@ -72,3 +72,36 @@
 // console.log(cc.decrement())
 // console.log(cc.reset())
 // console.log(cc.increment())
+
+
+//* Find the Duplicate Numbers from array
+// function findDuplicateNumbers(arr) {
+//     let DuplicateArr = []
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//             if (arr[i] === arr[j]) {
+//                 DuplicateArr.push(arr[j])
+//             }
+//         }
+//     }
+//     return DuplicateArr
+// }
+
+// let arr = [1, 2, 1, 3, 4, 2, 5, 3]
+// console.log(findDuplicateNumbers(arr))
+
+//* Optimized Way
+function findDuplicateNumbers(arr) {
+    let DuplicateArr = new Set()
+    let nonDuplicateArr = new Set()
+
+    for (number of arr) {
+        if (nonDuplicateArr.has(number)) {
+            DuplicateArr.add(number)
+        }
+        nonDuplicateArr.add(number)
+    }
+    console.log("Duplicate : " + Array.from(DuplicateArr))
+}
+let arr = [1, 2, 1, 3, 4, 2, 5, 3]
+findDuplicateNumbers(arr)
