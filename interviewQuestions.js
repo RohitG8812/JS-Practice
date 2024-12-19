@@ -74,7 +74,7 @@
 // console.log(cc.increment())
 
 
-//* Find the Duplicate Numbers from array
+//* 4.Find the Duplicate Numbers from array
 // function findDuplicateNumbers(arr) {
 //     console.time("Execution Time");
 //     let DuplicateArr = []
@@ -93,19 +93,87 @@
 // findDuplicateNumbers(arr)
 
 //* Optimized Way
-function findDuplicateNumbers(arr) {
-    console.time("Execution Time");
-    let DuplicateArr = new Set()
-    let nonDuplicateArr = new Set()
+// function findDuplicateNumbers(arr) {
+//     console.time("Execution Time");
+//     let DuplicateArr = new Set()
+//     let nonDuplicateArr = new Set()
 
-    for (number of arr) {
-        if (nonDuplicateArr.has(number)) {
-            DuplicateArr.add(number)
-        }
-        nonDuplicateArr.add(number)
-    }
-    console.timeEnd("Execution Time");
-    console.log("Duplicate : " + Array.from(DuplicateArr))
-}
-let arr = [1, 2, 1, 3, 4, 2, 5, 3]
-findDuplicateNumbers(arr)
+//     for (number of arr) {
+//         if (nonDuplicateArr.has(number)) {
+//             DuplicateArr.add(number)
+//         }
+//         nonDuplicateArr.add(number)
+//     }
+//     console.timeEnd("Execution Time");
+//     console.log("Duplicate : " + Array.from(DuplicateArr))
+// }
+// let arr = [1, 2, 1, 3, 4, 2, 5, 3]
+// findDuplicateNumbers(arr)
+
+//* 5. print month for the number enter by the user for eg 3 is March
+// function printMonth(int) {
+//     switch (int) {
+//         case 1:
+//             return "January"
+//             break;
+//         case 2:
+//             return "February"
+//             break
+//         case 3:
+//             return "March"
+//             break
+//         case 4:
+//             return "April"
+//             break
+//         case 5:
+//             return "May"
+//             break
+//         case 6:
+//             return "June"
+//             break
+//         case 7:
+//             return "July"
+//             break
+//         case 8:
+//             return "August"
+//             break
+//         case 9:
+//             return "September"
+//             break
+//         case 10:
+//             return "October"
+//             break
+//         case 11:
+//             return "November"
+//             break
+//         case 12:
+//             return "December"
+//             break
+//         default:
+//             return "Wrong Input please enter number from 1 to 12 only"
+//             break;
+//     }
+// }
+// let result = printMonth(10)
+// console.log(result)
+
+//* Optimized Way (Return directly answer instead of searching for input from start to input number)
+// function printMonth(int) {
+//     let months = {
+//         1: "January",
+//         2: "February",
+//         3: "March",
+//         4: "April",
+//         5: "May",
+//         6: "June",
+//         7: "July",
+//         8: "August",
+//         9: "September",
+//         10: "October",
+//         11: "November",
+//         12: "December"
+//     }
+//     return months[int]
+// }
+// let result = printMonth(8)
+// console.log(result)
